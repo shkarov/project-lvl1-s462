@@ -1,6 +1,6 @@
 {
   "name": "braingames-shkarov",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Project Brain Games JavaScript",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
