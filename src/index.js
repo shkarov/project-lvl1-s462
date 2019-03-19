@@ -5,4 +5,3 @@ export const welcome = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log('Hello, %s!', name);
 };
-
