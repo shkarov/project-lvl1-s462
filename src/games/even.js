@@ -17,7 +17,7 @@ const checkEven = () => {
   const checkAnswer = (count, num) => {
     if (count < 1) {
       console.log(`Congratulations, ${player} !`);
-      return;
+      return true;
     }
     console.log(`Question: ${num}`);
     const answer = readlineSync.question('Your answer:');
@@ -26,7 +26,8 @@ const checkEven = () => {
       return checkAnswer(count - 1, getRandomInt(INT_MIN, INT_MAX));
     }
     console.log('"yes" is wrong answer ;(. Correct answer was "no".');
-    return;
+    console.log(`Let's try again, ${player} !`);
+    return false;
   };
 
   return checkAnswer(COUNT_GAMES, getRandomInt(INT_MIN, INT_MAX));
