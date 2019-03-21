@@ -13,8 +13,7 @@ const createData = () => {
   const question = `${num1} ${sign} ${num2}`;
   const answer = calculateNums(num1, num2, sign);
 
-  const pair = cons(question, answer);
-  return pair;
+  return cons(question, String(answer));
 };
 
 export default () => {

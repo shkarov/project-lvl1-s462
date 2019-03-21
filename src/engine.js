@@ -1,34 +1,35 @@
-import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
-import { welcome, ruleOfGame, helloPlayer } from './lib';
+import {
+  welcome, ruleOfGame, getPlayerName, hello, question, getPlayerAnswer, isCorrectAnswer,
+  incorrectAnswer, correctAnswer, congratulation,
+} from './lib';
 
 const countGames = 3;
 
 const main = (ruleGame, funcCreateDataGame) => {
   welcome();
   ruleOfGame(ruleGame);
-  const player = readlineSync.question('May I have your name? ');
-  helloPlayer(player);
+  const player = getPlayerName();
+  hello(player);
 
   const callGame = (counter) => {
-    if (counter < 1) {
-      return true;
+    if (counter === 0) {
+      congratulation(player);
+      return 0;
     }
     const dataGame = funcCreateDataGame();
-    console.log(`Question: ${car(dataGame)}`);
-    const answer = readlineSync.question('Your answer:');
-    if (answer !== `${cdr(dataGame)}`) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${cdr(dataGame)}.`);
-      console.log(`Let's try again, ${player} !`);
-      return false;
+    question(car(dataGame));
+    const answer = getPlayerAnswer();
+
+    if (!isCorrectAnswer(answer, cdr(dataGame))) {
+      incorrectAnswer(answer, cdr(dataGame), player);
+      return 0;
     }
-    console.log('Correct!');
+    correctAnswer();
     return callGame(counter - 1);
   };
 
-  if (callGame(countGames)) {
-    console.log(`Congratulations, ${player} !`);
-  }
+  callGame(countGames);
 };
 
 export default main;
