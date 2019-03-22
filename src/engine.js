@@ -1,31 +1,31 @@
 import { car, cdr } from 'hexlet-pairs';
-import {
-  welcome, ruleOfGame, getPlayerName, hello, question, getPlayerAnswer, isCorrectAnswer,
-  incorrectAnswer, correctAnswer, congratulation,
-} from './lib';
+import readlineSync from 'readline-sync';
+
+const isCorrectAnswer = (playerAnswer, CorrectAnswer) => playerAnswer === CorrectAnswer;
 
 const countGames = 3;
 
 const main = (ruleGame, funcCreateDataGame) => {
-  welcome();
-  ruleOfGame(ruleGame);
-  const player = getPlayerName();
-  hello(player);
+  console.log('Welcome to the Brain Games!');
+  console.log(ruleGame);
+  const player = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${player} !`);
 
   const callGame = (counter) => {
     if (counter === 0) {
-      congratulation(player);
+      console.log(`Congratulations, ${player} !`);
       return 0;
     }
     const dataGame = funcCreateDataGame();
-    question(car(dataGame));
-    const answer = getPlayerAnswer();
+    console.log(`Question: ${car(dataGame)}`);
+    const answer = readlineSync.question('Your answer: ');
 
     if (!isCorrectAnswer(answer, cdr(dataGame))) {
-      incorrectAnswer(answer, cdr(dataGame), player);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${cdr(dataGame)}".`);
+      console.log(`Let's try again, ${player} !`);
       return 0;
     }
-    correctAnswer();
+    console.log('Correct!');
     return callGame(counter - 1);
   };
 

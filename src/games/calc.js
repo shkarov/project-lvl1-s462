@@ -1,6 +1,33 @@
 import { cons } from 'hexlet-pairs';
 import main from '../engine';
-import { getRandomInt, getSignRandom, calculateNums } from '../lib';
+
+const getRandomInt = (min, max) => Math.round(min - 0.5 + Math.random() * (max - min + 1));
+
+const getSignRandom = (num) => {
+  if (num === 1) {
+    return '+';
+  }
+  if (num === 2) {
+    return '-';
+  }
+  if (num === 3) {
+    return '*';
+  }
+  return '';
+};
+
+const calculateNums = (num1, num2, sign) => {
+  switch (sign) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      return num1;
+  }
+};
 
 const ruleGame = 'What is the result of the expression?';
 
