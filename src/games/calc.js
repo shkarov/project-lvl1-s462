@@ -1,7 +1,8 @@
 import { cons } from 'hexlet-pairs';
 import main from '../engine';
+import getRandomInt from '../lib';
 
-const getRandomInt = (min, max) => Math.round(min - 0.5 + Math.random() * (max - min + 1));
+const description = 'What is the result of the expression?';
 
 const getSignRandom = (num) => {
   if (num === 1) {
@@ -29,8 +30,6 @@ const calculateNums = (num1, num2, sign) => {
   }
 };
 
-const ruleGame = 'What is the result of the expression?';
-
 const createData = () => {
   const num1 = getRandomInt(2, 100);
   const num2 = getRandomInt(2, 100);
@@ -44,5 +43,5 @@ const createData = () => {
 };
 
 export default () => {
-  main(ruleGame, createData);
+  main(description, createData);
 };

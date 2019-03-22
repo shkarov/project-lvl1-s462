@@ -5,10 +5,9 @@ import {
   cdr,
 } from 'hexlet-pairs';
 import main from '../engine';
+import getRandomInt from '../lib';
 
-const ruleGame = 'What number is missing in the progression ?';
-
-const getRandomInt = (min, max) => Math.round(min - 0.5 + Math.random() * (max - min + 1));
+const description = 'What number is missing in the progression ?';
 
 const createProgression = (count, step, acc) => {
   if (count === 0) {
@@ -46,5 +45,5 @@ const createData = () => {
 };
 
 export default () => {
-  main(ruleGame, createData);
+  main(description, createData);
 };
