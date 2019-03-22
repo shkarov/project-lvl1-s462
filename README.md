@@ -12,3 +12,5 @@ $ npm install -g braingames-shkarov
 <a href="https://asciinema.org/a/u9fP3TGEGV3dXKDzGxeRXrcpt" target="_blank"><img src="https://asciinema.org/a/u9fP3TGEGV3dXKDzGxeRXrcpt.svg" /></a>
 
 <a href="https://asciinema.org/a/HrOpX4ca78Th8NtxbDPLGC2P2" target="_blank"><img src="https://asciinema.org/a/HrOpX4ca78Th8NtxbDPLGC2P2.svg" /></a>
+
+<a href="https://asciinema.org/a/AylhNANSvHx74OCqjpMJmIQcP" target="_blank"><img src="https://asciinema.org/a/AylhNANSvHx74OCqjpMJmIQcP.svg" /></a>
