@@ -9,7 +9,7 @@ $ npm install -g braingames-shkarov
 
 [![Build Status](https://travis-ci.org/shkarov/project-lvl1-s462.svg?branch=master)](https://travis-ci.org/shkarov/project-lvl1-s462)
 
-<a href="https://asciinema.org/a/u9fP3TGEGV3dXKDzGxeRXrcpt" target="_blank"><img src="https://asciinema.org/a/u9fP3TGEGV3dXKDzGxeRXrcpt.svg" /></a>
+<a href="https://asciinema.org/a/RdV0H9wL6HU4pE23OW7t7CRLT" target="_blank"><img src="https://asciinema.org/a/RdV0H9wL6HU4pE23OW7t7CRLT.svg" /></a>
 
 <a href="https://asciinema.org/a/HrOpX4ca78Th8NtxbDPLGC2P2" target="_blank"><img src="https://asciinema.org/a/HrOpX4ca78Th8NtxbDPLGC2P2.svg" /></a>
 

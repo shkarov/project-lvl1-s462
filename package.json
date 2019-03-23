@@ -1,6 +1,6 @@
 {
   "name": "braingames-shkarov",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Project Brain Games JavaScript",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
