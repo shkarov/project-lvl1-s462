@@ -1,21 +1,8 @@
 import { cons } from 'hexlet-pairs';
-import main from '../engine';
-import getRandomInt from '../lib';
+import playGame from '../engine';
+import getRandomInt from '../utils';
 
 const description = 'What is the result of the expression?';
-
-const getSignRandom = (num) => {
-  if (num === 1) {
-    return '+';
-  }
-  if (num === 2) {
-    return '-';
-  }
-  if (num === 3) {
-    return '*';
-  }
-  return '';
-};
 
 const calculateNums = (num1, num2, sign) => {
   switch (sign) {
@@ -34,7 +21,9 @@ const createData = () => {
   const num1 = getRandomInt(2, 100);
   const num2 = getRandomInt(2, 100);
 
-  const sign = getSignRandom(getRandomInt(1, 3));
+  const setMathSimbols = '+-*';
+
+  const sign = setMathSimbols.substr(getRandomInt(1, 3) - 1, 1);
 
   const question = `${num1} ${sign} ${num2}`;
   const answer = calculateNums(num1, num2, sign);
@@ -43,5 +32,5 @@ const createData = () => {
 };
 
 export default () => {
-  main(description, createData);
+  playGame(description, createData);
 };

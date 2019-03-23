@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import main from '../engine';
-import getRandomInt from '../lib';
+import playGame from '../engine';
+import getRandomInt from '../utils';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -14,5 +14,5 @@ const createData = () => {
 };
 
 export default () => {
-  main(description, createData);
+  playGame(description, createData);
 };
