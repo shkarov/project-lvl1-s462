@@ -4,26 +4,26 @@ import getRandomInt from '../utils';
 
 const description = 'What number is missing in the progression ?';
 
-const lenProgression = 10;
+const progressionLength = 10;
 
-const createQuestion = (start, step, indexHidden) => {
-  const strQuestion = (count, acc) => {
-    if (count > lenProgression) {
+const createQuestion = (start, step, indexOfHiddenItem) => {
+  const stringOfQuestion = (count, acc) => {
+    if (count > progressionLength) {
       return acc;
     }
-    const nextValue = (count === indexHidden) ? `${acc} ..` : `${acc} ${start + step * count}`;
-    return strQuestion(count + 1, nextValue);
+    const accValue = (count === indexOfHiddenItem) ? `${acc} ..` : `${acc} ${start + step * count}`;
+    return stringOfQuestion(count + 1, accValue);
   };
-  return strQuestion(1, '');
+  return stringOfQuestion(1, '');
 };
 
 const createData = () => {
-  const numStart = getRandomInt(1, 100);
-  const numStep = getRandomInt(1, 20);
-  const indexHidden = getRandomInt(1, lenProgression);
+  const start = getRandomInt(1, 100);
+  const step = getRandomInt(1, 20);
+  const indexOfHiddenItem = getRandomInt(1, progressionLength);
 
-  const question = createQuestion(numStart, numStep, indexHidden);
-  const answer = String(numStart + numStep * indexHidden);
+  const question = createQuestion(start, step, indexOfHiddenItem);
+  const answer = String(start + step * indexOfHiddenItem);
 
   return cons(question, answer);
 };

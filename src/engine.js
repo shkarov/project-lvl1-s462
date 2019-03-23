@@ -7,11 +7,11 @@ const playGame = (description, createDataGame) => {
   console.log('Welcome to the Brain Games!');
   console.log(description);
   const player = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${player} !`);
+  console.log(`Hello, ${player}!`);
 
   const callGame = (counter) => {
     if (counter === 0) {
-      console.log(`Congratulations, ${player} !`);
+      console.log(`Congratulations, ${player}!`);
       return;
     }
     const dataGame = createDataGame();
@@ -20,7 +20,7 @@ const playGame = (description, createDataGame) => {
 
     if (answer !== cdr(dataGame)) {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${cdr(dataGame)}".`);
-      console.log(`Let's try again, ${player} !`);
+      console.log(`Let's try again, ${player}!`);
       return;
     }
     console.log('Correct!');
