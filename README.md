@@ -9,7 +9,7 @@ The essence of the game is as follows: the user is shown a random mathematical e
 The essence of the game is as follows: the user is shown two random numbers. The user must calculate and enter the greatest common factor of these numbers.
 #### - brain-progression.js Arithmetic progression. 
 The essence of the game is as follows: we show the player a series of numbers that forms an arithmetic progression, replacing any of the numbers with two dots. The player must determine this number.
-#### - brain-prime.js Is it a prime number? 
+#### - brain-prime.js Prime check. 
 The essence of the game is as follows: a random number is shown to the user. And the user needs to answer the number is simple or not.
 ### Setup
 ```sh
